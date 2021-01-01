@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:like_button/like_button.dart';
 import 'package:lottie/lottie.dart';
 
 import 'constants.dart';
@@ -9,7 +8,6 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -108,8 +106,6 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
               child: Lottie.asset('assets/animations/new_year.json',
                   controller: _yearController,
                   repeat: true, onLoaded: (composition) {
-                // Configure the AnimationController with the duration of the
-                // Lottie file and start the animation.
                 _yearController..duration = composition.duration;
               }),
             ),
@@ -121,8 +117,6 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
               child: Lottie.asset('assets/animations/fireworks.json',
                   controller: _fireworksController,
                   repeat: true, onLoaded: (composition) {
-                // Configure the AnimationController with the duration of the
-                // Lottie file and start the animation.
                 _fireworksController..duration = composition.duration;
               }),
             ),
