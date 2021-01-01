@@ -50,7 +50,6 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
     _yearIconController =
         AnimationController(vsync: this, duration: Duration(milliseconds: 200));
     _yearController = AnimationController(vsync: this);
-
   }
 
   @override
@@ -106,17 +105,13 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
               left: 0,
               bottom: 0,
               right: 0,
-              child: Lottie.asset(
-                'assets/animations/new_year.json',
-                controller: _yearController,
-                  repeat: true,
-                  onLoaded: (composition) {
-                    // Configure the AnimationController with the duration of the
-                    // Lottie file and start the animation.
-                    _yearController
-                      ..duration = composition.duration;
-                  }
-              ),
+              child: Lottie.asset('assets/animations/new_year.json',
+                  controller: _yearController,
+                  repeat: true, onLoaded: (composition) {
+                // Configure the AnimationController with the duration of the
+                // Lottie file and start the animation.
+                _yearController..duration = composition.duration;
+              }),
             ),
             Positioned(
               top: 0,
@@ -125,12 +120,10 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
               right: 0,
               child: Lottie.asset('assets/animations/fireworks.json',
                   controller: _fireworksController,
-                  repeat: true,
-                  onLoaded: (composition) {
+                  repeat: true, onLoaded: (composition) {
                 // Configure the AnimationController with the duration of the
                 // Lottie file and start the animation.
-                _fireworksController
-                  ..duration = composition.duration;
+                _fireworksController..duration = composition.duration;
               }),
             ),
           ],
